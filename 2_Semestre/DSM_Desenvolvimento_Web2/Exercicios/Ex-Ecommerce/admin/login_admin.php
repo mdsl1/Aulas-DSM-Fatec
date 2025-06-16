@@ -7,7 +7,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Login de Administrador</title>
-        <link href="../css/adminLoginStyle.css" rel="stylesheet">
+        <link href="../css/admLoginStyle.css" rel="stylesheet">
     </head>
     <body>
         <video autoplay muted loop id="backgroundVideo">

@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS minersShopping;
+CREATE DATABASE IF NOT EXISTS miners_shopping_db;
 
-USE minersShopping;
+USE miners_shopping_db;
 
 CREATE TABLE IF NOT EXISTS produtos (
     id INT NOT NULL AUTO_INCREMENT,
@@ -10,6 +10,16 @@ CREATE TABLE IF NOT EXISTS produtos (
     PRIMARY KEY(id)
 );
 
+CREATE TABLE IF NOT EXISTS clientes (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (50) NOT NULL,
+    endereco VARCHAR(50),
+    cidade VARCHAR(50),
+    estado CHAR(2),
+    email VARCHAR(30),
+    senha VARCHAR(100)
+);
+
 INSERT INTO produtos (nome, descricao, preco)
 VALUES ('Picareta Comum', 'Picareta simples para minerações lentas e improdutivas.', 256.32);
 
@@ -17,13 +27,19 @@ INSERT INTO produtos (nome, descricao, preco)
 VALUES ('Picareta de Diamante', 'Picareta feita com diamantes, perfeita pra extrair obsidiana.', 512.32);
 
 INSERT INTO produtos (nome, descricao, preco)
-VALUES ('Picareta de Netherite', 'Picareta extremamente resistente, feita com mineral obtido diretamente do submundo.', 1024.32)
+VALUES ('Picareta de Netherite', 'Picareta extremamente resistente, feita com mineral obtido diretamente do submundo.', 1024.32);
 
 INSERT INTO produtos (nome, descricao, preco)
-VALUES ('Picareta de Netherite Encantada', 'Combina a resistencia da picareta de netherite com encantamentos antigos de velocidade.', 2048.32)
+VALUES ('Picareta de Netherite Encantada', 'Combina a resistencia da picareta de netherite com encantamentos antigos de velocidade.', 2048.32);
 
 INSERT INTO produtos (nome, descricao, preco)
 VALUES ('Escavadora de Mão', 'Ferramenta utilizada por anões mineradores nas minas espaciais.', 4096.32);
 
 INSERT INTO produtos (nome, descricao, preco)
 VALUES ('Pack de 64 Tochas', 'Um pack de tochas ideal para explorar cavernas escuras.', 64.32);
+
+INSERT INTO clientes (nome, endereco, cidade, estado, email, senha)
+VALUES ('Rodolfo', 'Rua das Amêndoas, 255', 'Marília', 'SP', 'aaa@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92');
+
+CREATE USER 'php'@'localhost' IDENTIFIED BY 's3gr3d0';
+GRANT ALL ON miners_shopping_db.* TO 'php'@'localhost';

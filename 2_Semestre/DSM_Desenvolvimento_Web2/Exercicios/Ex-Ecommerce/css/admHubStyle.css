@@ -1,0 +1,76 @@
+*{
+    font-family: monocraft, monospace, serif;
+    margin: 0;
+    padding: 0;
+}
+
+#backgroundVideo{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -999;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: #212121a4;
+    backdrop-filter: blur(10px);
+}
+main h1 {
+    margin: 3% 0 2% 0;
+    color: #ff6200;
+}
+main h2 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5%;
+}
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: baseline;
+    width: 60%;
+    background-color: #ffffffcc;
+    border-radius: 5px;
+    padding: 2% 5%;
+}
+main p {
+    color: #e95900;
+    font-size: 1.3rem;
+    margin: 1% 0 2% 0;
+    font-weight: bold;
+}
+ul li {
+    margin-bottom: 2%;
+    font-size: 1.1rem;
+    color: #e95900;
+}
+a:not(.logout), a:visited:not(.logout) {
+    color: #000;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+a:not(.logout):hover {
+    color: #e95900;
+}
+.logout {
+    color: #ac0000;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+.logout:hover {
+    color: #f00;
+}
+
