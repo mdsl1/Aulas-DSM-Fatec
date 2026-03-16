@@ -26,6 +26,7 @@
                 <ul>
                     <li><a href="form_cadastro_produto.php">Cadastrar produto</a></li>
                     <li><a href="listar_produtos.php">Listar produtos cadastrados</a></li>
+                    <li><a href="listar_vendas.php">Histórico de Vendas</a></li>
                     <li><a class="logout" href="logout.php">Sair do sistema</a></li>
                 </ul>
             </section>

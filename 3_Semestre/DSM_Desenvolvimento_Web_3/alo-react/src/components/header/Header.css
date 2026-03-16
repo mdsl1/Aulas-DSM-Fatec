@@ -1,0 +1,9 @@
+header {
+    border: 1px solid #000;
+    background-color: aquamarine;
+    padding-left: 2rem;
+    margin-bottom: 3%;
+}
+header h1 {
+    color: aliceblue;
+}

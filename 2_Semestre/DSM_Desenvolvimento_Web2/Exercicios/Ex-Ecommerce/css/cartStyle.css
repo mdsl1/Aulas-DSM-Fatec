@@ -1,0 +1,228 @@
+*{
+    font-family: monocraft, monospace, serif;
+    margin: 0;
+    padding: 0;
+}
+
+#glassEffect{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background-color: #161616a1; /*919191a1*/
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: url("../Midias/Background site.png") fixed no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+main h1 {
+    font-size: 1.5rem;
+    margin: 5% 0 2% 0;
+    color: #fdcb01;
+    text-shadow: #ffca5f 0 3px 10px;
+}
+main h2 {
+    font-size: 1.3rem;
+    margin: 5% 0 2% 0;
+    color: #fff;
+}
+
+header{
+    border: 2px solid #000;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right top, #483000, #814002,#5f2e00);
+
+}
+#logo{
+    width: 5rem;
+}
+header h1{
+    font-size: 2rem;
+    color: #fdcb01;
+    text-shadow: #ffca5f 0 3px 10px;
+}
+header p{
+    color: #ffb82a;
+    font-style: italic;
+}
+
+nav ul{
+    border: 2px solid #000;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to left bottom, #0f0f0f 30%,#19002e 70%);
+}
+nav ul li, a, a:visited{
+    list-style-type: none;
+    color: #fdcb01;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+nav ul li:hover, a:hover{
+    color: #fd8701;
+    text-shadow: #ffca5f 0 0 10px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+table {
+    width: 90%;
+    margin: 2% auto;
+    font-size: 1.1rem;
+    color: #000;
+    border-collapse: collapse;
+    background-color: #ffffffcc;
+    border-radius: 5px;
+    text-align: baseline;
+}
+th{
+    border: #ff6200 5px double;
+    padding: 15px 10px;
+}
+td {
+    font-size: 1rem;
+    border: #ff6200 2px solid;
+    padding: 6px;
+}
+tr:nth-child(even) {
+    background-color:#ffac59cc;
+}
+tr:last-child {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    background-color:#ff7f00cc;
+}
+form.inline-form {
+    display: flex; 
+    flex-flow: row nowrap;
+    gap: 3%;
+}
+input {
+    width: 50%;
+    padding-left: 5%;
+}
+button {
+    font-size: 0.9rem;
+    margin: 1% auto;
+    padding: 0.5rem 1rem;
+    background-color: #e95900;
+    border: #000 1px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#finish {
+    font-size: 1.1rem;
+    margin: 2% auto 5% auto;
+    padding: 1rem 1.5rem;
+}
+
+.card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: column nowrap;
+    border: 2px solid #e9ba00;
+    width: 20rem;
+    height: 20rem;
+    box-shadow: #e95900 0 0 20px 2px;
+    margin: 0.5% auto;
+    transition: 0.2s ease-in-out;
+    background-image: linear-gradient(to bottom, #fff,#1b1b1b ,#2d0039);
+}
+.card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.line{
+    width: 80%;
+    height: 1.6px;
+    background-color: #e9ba00;
+    margin: 0 auto;
+}
+.cardHeader{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardTitle{
+    font-size: 1.3rem;
+    text-align: center;
+    color: #e9ba00;
+}
+.price{
+    font-size: 1.2rem;
+    color: #e99400;
+}
+.buyBtn {
+    padding: 5%;
+    background-color: #e95900;
+    border: #000 1px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: #000;
+}
+.buyBtn:hover {
+    background-color: #e0be00;
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+footer {
+    background-color: #2d0039;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footerCadastro {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer address{
+    color: #fdcb01;
+    font-size: 1.2rem;
+}
+
+/*button{
+    font-size: 1.1rem;
+    margin-top: 10%;
+    padding: 3%;
+    background-color: #e95900;
+    border: #000 1px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+button:hover{
+    background-color: #e0be00;
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.1);
+    cursor: pointer;
+}*/

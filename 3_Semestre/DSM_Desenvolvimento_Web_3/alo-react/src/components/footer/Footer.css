@@ -1,0 +1,38 @@
+footer {
+    border: 1px solid #000;
+    background-color: cadetblue;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 15%;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bolder;
+}
+
+address {
+    align-content: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.9rem;
+}
+
+footer li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+footer li img {
+    width: 2.1rem;
+}
+
+footer li:hover {
+    color: #000;
+    cursor: pointer;
+}

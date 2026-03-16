@@ -20,6 +20,20 @@ CREATE TABLE IF NOT EXISTS clientes (
     senha VARCHAR(100)
 );
 
+CREATE TABLE IF NOT EXISTS pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_cliente INT,
+    data DATETIME,
+    total DECIMAL(10,2)
+);
+
+CREATE TABLE IF NOT EXISTS itens_pedido (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_pedido INT,
+    id_produto INT,
+    qtde INT
+);
+
 INSERT INTO produtos (nome, descricao, preco)
 VALUES ('Picareta Comum', 'Picareta simples para minerações lentas e improdutivas.', 256.32);
 
@@ -42,4 +56,4 @@ INSERT INTO clientes (nome, endereco, cidade, estado, email, senha)
 VALUES ('Rodolfo', 'Rua das Amêndoas, 255', 'Marília', 'SP', 'aaa@gmail.com', '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92');
 
 CREATE USER 'php'@'localhost' IDENTIFIED BY 's3gr3d0';
-GRANT ALL ON miners_shopping_db.* TO 'php'@'localhost';
+GRANT ALL ON miners_shopping_db.* TO 'php'@'127.0.0.1:3309';

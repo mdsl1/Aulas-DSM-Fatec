@@ -1,8 +1,8 @@
 <?php
     $host = '127.0.0.1:3309';
     $dbname = 'miners_shopping_db';
-    $usuario = 'php'; // User padrão do projeto
-    $senha = 's3gr3d0';
+    $usuario = 'root'; // User padrão do projeto
+    $senha = '';
     
     try {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $usuario, $senha);

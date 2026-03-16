@@ -1,0 +1,12 @@
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 3% auto;
+}
+main h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3%;
+}

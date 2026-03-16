@@ -1,0 +1,187 @@
+*{
+    font-family: monocraft, monospace, serif;
+    margin: 0;
+    padding: 0;
+}
+
+#glassEffect{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -99;
+    background-color: #161616a1; /*919191a1*/
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: url("../Midias/Background site.png") fixed no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+main h1 {
+    font-size: 1.5rem;
+    margin: 5% 0 2% 0;
+    color: #fdcb01;
+    text-shadow: #ffca5f 0 3px 10px;
+}
+
+header{
+    border: 2px solid #000;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: linear-gradient(to right top, #483000, #814002,#5f2e00);
+
+}
+#logo{
+    width: 5rem;
+}
+header h1{
+    font-size: 2rem;
+    color: #fdcb01;
+    text-shadow: #ffca5f 0 3px 10px;
+}
+header p{
+    color: #ffb82a;
+    font-style: italic;
+}
+
+nav ul{
+    border: 2px solid #000;
+    margin: 1%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-image: linear-gradient(to left bottom, #0f0f0f 30%,#19002e 70%);
+}
+nav ul li, nav a, nav a:visited{
+    list-style-type: none;
+    color: #fdcb01;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+nav ul li:hover, a:hover{
+    color: #fd8701;
+    text-shadow: #ffca5f 0 0 10px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#showProduct {
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: start;
+    justify-content: space-around;
+}
+#showProduct img {
+    width: 35%;
+}
+#infos {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: start;
+    text-align: start;
+    width: 55%;
+    height: 100%;
+    color: #fff;
+}
+#infos h2 {
+    font-size: 1.3rem;
+    margin: 0 0 3% 0;
+    color: #fdcb01;
+    text-shadow: #ffca5f 0 3px 10px;
+}
+#infos p {
+    font-size: 1.1rem;
+    margin: 1% 0 2% 0;
+}
+#infos #precoParcelado {
+    font-size: 1rem;
+    margin: 5% 0 2% 0;
+}
+#infos #precoTotal , #infos #precoFinal {
+    color: #fdcb01;
+    font-size: 1.3rem;
+}
+#qtdeItensControl {
+    margin-top: 4%;
+    width: 30%;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 3%;
+}
+#qtdeItensControl #qtdeItem {
+    padding: 2%;
+    text-align: center;
+    width: 30%;
+    cursor: pointer;
+}
+#qtdeItensControl button {
+    padding: 2% 4%;
+    cursor: pointer;
+    background-color: #e95900;
+    border: #000 1px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: #000;
+}
+#qtdeItensControl button:hover {
+    background-color: #e0be00;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+
+button:not(#qtdeItensControl button) {
+    font-size: 1.1rem;
+    margin-top: 2%;
+    padding: 1rem 1.1rem;
+    background-color: #e95900;
+    border: #000 1px solid;
+    border-radius: 5px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+button:not(#qtdeItensControl button):hover{
+    background-color: #e0be00;
+    color: #000;
+    font-weight: bold;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+form button:not(#qtdeItensControl button) {
+    margin-top: 10%;
+}
+
+footer {
+    background-color: #2d0039;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footerCadastro {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+footer address{
+    color: #fdcb01;
+    font-size: 1.2rem;
+}

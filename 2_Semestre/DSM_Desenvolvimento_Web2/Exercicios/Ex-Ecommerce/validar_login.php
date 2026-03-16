@@ -19,6 +19,20 @@
         header("Location: index.php");
     }
 ?>
-<h1>E-mail ou senha inválidos!</h1>
-<p>Caso não possua cadastro, <a href="form_cadastrar_cliente.php">clique aqui</a></p>
-<p>Caso queira tentar logar novamente, <a href="login_cliente.php">clique aqui</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Cliente</title>
+    <link rel="stylesheet" href="css/clienteLoginStyle.css">
+</head>
+<body>
+    <div id="loginContainer">
+        <h1>E-mail ou senha inválidos!</h1>
+        <p>Caso não possua cadastro, <a href="form_cadastrar_cliente.php">clique aqui</a></p>
+        <p>Caso queira tentar logar novamente, <a href="login_cliente.php">clique aqui</a></p>
+    </div>
+</body>
+</html>
+

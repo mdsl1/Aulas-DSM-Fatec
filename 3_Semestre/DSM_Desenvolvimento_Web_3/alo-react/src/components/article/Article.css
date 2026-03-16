@@ -1,0 +1,21 @@
+article {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-top: 3%;
+    border-top: 2px solid #000;
+}
+article p {
+    width: 77%;
+}
+#likeContainer {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2%;
+}
+#likeContainer button {
+    cursor: pointer;
+}

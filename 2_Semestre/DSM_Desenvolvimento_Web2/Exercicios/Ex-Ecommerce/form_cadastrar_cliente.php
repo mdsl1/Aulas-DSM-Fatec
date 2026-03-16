@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="index.php">Inicio</a></li>
                 <li>Ofertas</li>
-                <li><a href="cart.html">Carrinho</a></li>
+                <li><a href="carrinho.php">Carrinho</a></li>
                 <li>Sobre Nós</li>
                 <li>
                     <?php if(!isset($_SESSION["nome"])) { ?>
@@ -67,5 +67,6 @@
         <footer>
             <address>Av. Agosto de Deus, 444 - Marília, SP</address>
         </footer>
+        <div id="glassEffect"></div>
     </body>
 </html>
