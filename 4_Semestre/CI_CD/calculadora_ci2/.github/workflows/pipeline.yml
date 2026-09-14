@@ -1,0 +1,75 @@
+name: Pipeline CI/CD Python
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  release:
+    types: [ published ]
+
+jobs:
+  build-test-package:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+
+    steps:
+
+    # 1. Checkout do código
+    - name: Checkout código
+      uses: actions/checkout@v4
+
+    # 2. Configurar Python
+    - name: Configurar Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    # 3. Cache de dependências
+    - name: Cache de dependências
+      uses: actions/cache@v4
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ matrix.python-version }}-${{ hashFiles('**/pyproject.toml') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-${{ matrix.python-version }}-
+
+    # 4. Atualizar pip
+    - name: Atualizar pip
+      run: python -m pip install --upgrade pip
+
+    # 5. Instalar dependências
+    - name: Instalar dependências
+      run: |
+        pip install pytest build twine
+
+    # 6. Instalar pacote local (necessário para estrutura src/)
+    - name: Instalar pacote local
+      run: pip install -e .
+
+    # 7. Executar testes
+    - name: Executar testes
+      run: pytest
+
+    # 8. Gerar pacote (Package)
+    - name: Build do pacote
+      run: python -m build
+
+    # 9. Upload do artefato
+    - name: Upload do artefato
+      uses: actions/upload-artifact@v4
+      with:
+        name: pacote-python-${{ matrix.python-version }}
+        path: dist/
+
+    # 10. Publicar pacote (APENAS em release)
+    - name: Publicar pacote no PyPI
+      if: github.event_name == 'release'
+      run: python -m twine upload dist/*
+      env:
+        TWINE_USERNAME: __token__
+        TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}

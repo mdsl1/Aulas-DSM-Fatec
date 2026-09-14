@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calculadora-ci2"
+version = "0.1.0"
+description = "Biblioteca de calculadora"
+authors = [
+  {name="mdsl1"}
+]
+dependencies = []
