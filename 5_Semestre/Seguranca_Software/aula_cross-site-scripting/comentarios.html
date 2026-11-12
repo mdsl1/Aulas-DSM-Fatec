@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Comente aqui</h1>
+    <form>
+        <label for="comentario">Digite seu comentário:</label>
+        <input id="comentario" name="comentario" type="text">
+
+        <button type="button" onclick="publicar()">Publicar</button>
+    </form>
+
+    <section id="comentarios">
+        <h1>Comentários</h1>
+
+    </section>
+
+    <script>
+        const section = document.getElementById("comentarios");
+
+        function publicar() {
+            let text = document.getElementById("comentario").value;
+            console.log("entrou na function");
+            section.innerHTML += `<div>${text}</div>`;
+        }
+
+
+    </script>
+</body>
+</html>

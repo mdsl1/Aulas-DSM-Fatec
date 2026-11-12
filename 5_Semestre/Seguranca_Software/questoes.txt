@@ -1,0 +1,11 @@
+1. NP (processador de rede ou network processor) é um chip dedicado a direcionar tráfego de internet com altissima velocidade. Alguns exemplos com módulo de segurança são: Marvell OCTEON e Intel com tecnologia QAT integradas.
+
+2. O artigo de Clulow (2003) revelou falhas práticas na API ao extrair chaves de dispositivos físicos por confusão de comandos. Já  Delaune et al.(2009) criaram modelos formais para mapear vulnerabilidades matemáticas no PKCS#11 e garantir o uso seguro de chaves RSA em hardware.
+
+3. A familia PKCS vai do #1 ao #15. Os principais são:
+- #1 padroniza os mecanismos para criptografia de chaves;
+- #7 padroniza os mecanismos de sintaxe de mensagens; 
+- #5 padroniza os mecanismos para criptografia de senhas;
+- #11 e #15 padronizam tokens e cartões inteligentes. 
+
+4. O PKCS#11 funciona como um tradutor universal entre softwares e dispositivos físicos de criptografia (como tokens USB e cartões). Ela permite assinar documentos digitais ou autenticar sistemas sem que a chave jamais saia do hardware.

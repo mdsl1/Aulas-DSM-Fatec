@@ -1,0 +1,5 @@
+1. XOR é uma operação lógica que retorna 1 quando as entradas são diferentes e 0 quando as entradas são iguais. Quando você aplica XOR em um valor duas vezes usando a mesma chave retorna o dado original. Ele pode ser usado para mascarar textos.
+
+2. Algumas cifras de fluxo como ChaCha20 utilizam XOR para combinar dados e chaves, mas existem algoritmos de criptografia mais complexos como o AES que combinam XOR com operações matemáticas complexas para embaralhar dados em várias camadas.
+
+3. Uma chave aleatória é uma sequencia imprevisivel de bits geradas sem nenhuma lógica por trás. Ela é essencial, pois chaves com padrão podem ser adivinhadas por hackers. Ela ser randômica reduz as opções de descoberta para apenas força bruta, o que é inviável em muitos casos.
